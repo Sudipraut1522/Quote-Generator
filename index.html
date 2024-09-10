@@ -1,12 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="./style/index.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link rel="stylesheet" href="./style/index.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quotes Generation</title>
-</head>
-<body>
+  </head>
+  <body>
+    <div class="heading">
+      <div>
+        <h1 class="heading-title">Quotes Ganerator</h1>
+      </div>
+      <div>
+        <button id="dark-mode-toggle">Dark Mode</button>
+      </div>
+    </div>
+
+    <div class="dropdown_for_category">
+      <label for="Category">Choose a Category:</label>
+      <select name="category" id="category">
+        <option value="All">All</option>
+
+        <option value="Science">Science</option>
+        <option value="Technology">Technology</option>
+      </select>
+    </div>
+    <div class="Quotes_contaner">
+      <div class="Quotes"></div>
+    </div>
+
+    <div class="buttons">
+      <button id="btn">Previous</button>
+      <button id="btn">Next</button>
+
+      <button id="btn">Random</button>
+    </div>
+
     <script src="./js/index.js"></script>
-</body>
+  </body>
 </html>
