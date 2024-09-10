@@ -48,3 +48,58 @@ const quotes = {
   ]
 };
 
+let currentCategory = 'motivation';
+let currentIndex = 0;
+
+const quoteDisplay = document.getElementById('quotes');
+const authorDisplay = document.getElementById('author'); // Make sure this ID exists in your HTML
+const categorySelector = document.getElementById('category');
+const prevButton = document.getElementById('previous-btn');
+const nextButton = document.getElementById('next-btn');
+const randomButton = document.getElementById('random-btn');
+const reloadQuotesPage=document.getElementById(
+"quotes_ganerator"
+)
+
+function displayQuote() {
+  if (quotes[currentCategory]) {
+    const currentQuote = quotes[currentCategory][currentIndex];
+    quoteDisplay.textContent = currentQuote.text;
+    authorDisplay.textContent = `– ${currentQuote.author}`;
+  } else {
+    quoteDisplay.textContent = 'No quotes available.';
+    authorDisplay.textContent = '';
+  }
+}
+
+categorySelector.addEventListener('change', function () {
+  currentCategory = categorySelector.value;
+  currentIndex = 0; 
+  displayQuote(); 
+});
+
+randomButton.addEventListener('click', function () {
+  currentIndex = Math.floor(Math.random() * quotes[currentCategory].length);
+  displayQuote();
+});
+
+prevButton.addEventListener('click', function () {
+  if (currentIndex > 0) {
+    currentIndex--;
+    displayQuote();
+  }
+});
+
+nextButton.addEventListener('click', function () {
+  if (currentIndex < quotes[currentCategory].length - 1) {
+    currentIndex++;
+    displayQuote();
+  }
+});
+
+function reloadPage(){
+location.reload()
+
+}
+ reloadQuotesPage.addEventListener('click',reloadPage)
+displayQuote();
