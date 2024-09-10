@@ -1,41 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="./style/index.css" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quotes Generation</title>
-  </head>
-  <body>
-    <div class="heading">
-      <div>
-        <h1 class="heading-title">Quotes Ganerator</h1>
-      </div>
-      <div>
-        <button id="dark-mode-toggle">Dark Mode</button>
-      </div>
+<head>
+  <link rel="stylesheet" href="./style/index.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quotes Generator</title>
+</head>
+<body>
+  <div class="heading">
+    <div>
+      <h1 class="heading-title">Quotes Generator</h1>
     </div>
-
-    <div class="dropdown_for_category">
-      <label for="Category">Choose a Category:</label>
-      <select name="category" id="category">
-        <option value="All">All</option>
-
-        <option value="Science">Science</option>
-        <option value="Technology">Technology</option>
-      </select>
+    <div>
+      <button id="dark-mode-toggle">Dark Mode</button>
     </div>
-    <div class="Quotes_contaner">
-      <div class="Quotes"></div>
-    </div>
+  </div>
 
-    <div class="buttons">
-      <button id="btn">Previous</button>
-      <button id="btn">Next</button>
+  <div class="dropdown_for_category">
+    <label for="category">Choose a Category:</label>
+    <select id="category">
+      <option value="science">Science</option>
+      <option value="motivation">Motivation</option>
+    </select>
+  </div>
 
-      <button id="btn">Random</button>
-    </div>
+  <div class="quotes_container">
+    <h3 id="quotes"></h3>
+    <p id="author"></p> 
+  </div>
 
-    <script src="./js/index.js"></script>
-  </body>
+  <div class="buttons">
+    <button id="previous-btn">Previous</button>
+    <button id="next-btn">Next</button>
+    <button id="random-btn">Random</button>
+  </div>
+
+  <script src="./js/index.js"></script>
+</body>
 </html>

@@ -35,17 +35,31 @@
   font-size: 20px;
   padding: 3px;
 }
-.Quotes_contaner {
+.quotes_container{
+  position: relative;
   border: 2px solid gray;
   border-radius: 10px;
-  height: 500px;
+  height: 300px;
   padding-top: 10px;
-  max-width: 70%;
+  max-width: 50%;
   width: 100%;
   font-size: 25px;
-
+  text-align: center;
   margin: auto;
 }
+#quotes{
+position: absolute;
+padding: 10px;
+text-align: justify;
+
+}
+#author{
+  position: absolute;
+  bottom: 10px;
+  right: 5px;
+  
+  
+  }
 .buttons {
   width: 100%;
   margin-top: 20px;
@@ -53,7 +67,7 @@
   justify-content: center;
   gap: 40px;
 }
-#btn {
+#previous-btn{
   background-color: blue;
   font-size: 20px;
   padding: 4px;
@@ -62,6 +76,30 @@
   border: none;
   width: 100px;
   text-align: center;
+}
+#next-btn{
+  background-color: blue;
+  font-size: 20px;
+  padding: 4px;
+  border-radius: 4px;
+  color: white;
+  border: none;
+  width: 100px;
+  text-align: center;
+  cursor: pointer;
+}
+#random-btn{
+  cursor: pointer;
+  background-color: blue;
+  font-size: 20px;
+  padding: 4px;
+  border-radius: 4px;
+  color: white;
+  border: none;
+  width: 100px;
+  text-align: center;
+  cursor: pointer;
+
 }
 #dark-mode-toggle{
   border: none;
@@ -72,6 +110,7 @@
   background-color: #333;
   color: #fff;
 }
+
 @media (max-width: 480px) {
   .dropdown_for_category {
     font-size: 20px;
@@ -101,4 +140,10 @@
     justify-content: center;
     gap: 20px;
   }
+  #quotes{
+    position: absolute;
+    padding: 10px;
+    text-align: start;
+    
+    }
 }
