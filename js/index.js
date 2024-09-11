@@ -5,6 +5,7 @@ darkModeButton.addEventListener('click', () => {
   darkMode = !darkMode;
   if (darkMode) {
     document.body.classList.add('dark-mode');
+    
   } else {
     document.body.classList.remove('dark-mode');
   }
@@ -52,14 +53,28 @@ let currentCategory = 'motivation';
 let currentIndex = 0;
 
 const quoteDisplay = document.getElementById('quotes');
-const authorDisplay = document.getElementById('author'); // Make sure this ID exists in your HTML
+const authorDisplay = document.getElementById('author'); 
 const categorySelector = document.getElementById('category');
 const prevButton = document.getElementById('previous-btn');
 const nextButton = document.getElementById('next-btn');
 const randomButton = document.getElementById('random-btn');
-const reloadQuotesPage=document.getElementById(
-"quotes_ganerator"
-)
+const reloadQuotesPage=document.getElementById("quotes_ganerator")
+
+
+function fontSize(x) {
+  let font = window.getComputedStyle(document.getElementById("quotes")).fontSize;
+  font = font.replace(/\D/g, ''); 
+  font = Number(font); 
+
+  if (x === 1) { 
+    font += 1;
+  } else if (x === 2) { 
+    font -= 1;
+  }
+
+  document.getElementById("quotes").style.fontSize = font + 'px';
+}
+
 
 function displayQuote() {
   if (quotes[currentCategory]) {
@@ -103,3 +118,22 @@ location.reload()
 }
  reloadQuotesPage.addEventListener('click',reloadPage)
 displayQuote();
+
+
+
+
+function fontsize(x){
+
+  let font=window.getComputedStyle(document.getElementById("quotes")).fontSize;
+  font=font.replace(/\D/g,'');
+  font=Number(font);
+  if(x==1){
+    font=font+1;
+    document.getElementById("quotes").style.fontSize=font+'px';
+
+
+  }else{
+    font=font-1;
+    document.getElementById('quotes').style.fontSize=font+'px';
+  }
+}

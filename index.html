@@ -1,45 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <link rel="stylesheet" href="./style/index.css" />
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Quotes Generator</title>
-</head>
-<body>
-  <div class="heading">
-    <div id="quotes_ganerator">
-      <h1 class="heading-title" >Quotes Generator</h1>
+  <head>
+    <link rel="stylesheet" href="./style/index.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quotes Generator</title>
+  </head>
+  <body>
+    
+      <div class="heading">
+        <div id="quotes_ganerator">
+          <h1 class="heading-title">Quotes Generator</h1>
+        </div>
+        <div>
+          <button id="dark-mode-toggle">Dark Mode</button>
+        </div>
+      </div>
+      <div class="main_cointaner">
+      <div class="dropdown_for_category">
+        <label for="category">Choose a Category:</label>
+        <select id="category">
+          <option value="science">Science</option>
+          <option value="motivation">Motivation</option>
+          <option value="philosophy">philosophy</option>
+          <option value="inspiration">inspiration</option>
+          <option value="life">Life</option>
+        </select>
+      </div>
+
+      <div class="quotes_container">
+        <h3 id="quotes"></h3>
+        <p id="author"></p>
+        <div class="inc-dre-btn">
+          <button id="increment" onclick=fontSize(1)>+</button>
+          <button id="decrement" onclick=fontSize(2)> -</button>
+        </div>
+      </div>
+      <div class="btn">
+        <div class="buttons">
+          <button id="previous-btn">Previous</button>
+          <button id="next-btn">Next</button>
+          <button id="random-btn">Random</button>
+        </div>
+      </div>
     </div>
-    <div>
-      <button id="dark-mode-toggle">Dark Mode</button>
-    </div>
-  </div>
 
-  <div class="dropdown_for_category">
-    <label for="category">Choose a Category:</label>
-    <select id="category">
-      <option value="science">Science</option>
-      <option value="motivation">Motivation</option>
-      <option value="philosophy">philosophy</option>
-      <option value="inspiration">inspiration</option>
-      <option value="life">Life</option>
-
-
-    </select>
-  </div>
-
-  <div class="quotes_container">
-    <h3 id="quotes"></h3>
-    <p id="author"></p> 
-  </div>
-
-  <div class="buttons">
-    <button id="previous-btn">Previous</button>
-    <button id="next-btn">Next</button>
-    <button id="random-btn">Random</button>
-  </div>
-
-  <script src="./js/index.js"></script>
-</body>
+    <script src="./js/index.js"></script>
+  </body>
 </html>
